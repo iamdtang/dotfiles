@@ -20,3 +20,9 @@ parse_git_branch() {
 }
 
 export PS1="\u \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\]:"
+
+# Find the gzipped size of a file in pretty format
+# size dist/jquery.js
+size() {
+	gzip-size $1 | pretty-bytes
+}
