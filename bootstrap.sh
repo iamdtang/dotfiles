@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
-current_npm_prefix = npm config get prefix
-echo "Changing npm prefix to $current_npm_prefix"
+echo "Current npm prefix"
+npm config get prefix
 npm config set prefix ~/npm
+echo "Changed npm prefix to ~/npm"
 
+echo "Copying .bash_profile to home directory"
 cp .bash_profile ~/.bash_profile
 
 source ~/.bash_profile;
+echo "COMPLETED"
