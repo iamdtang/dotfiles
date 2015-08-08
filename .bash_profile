@@ -3,6 +3,10 @@ alias hideDesktop="defaults write com.apple.finder CreateDesktop -bool false && 
 alias showDesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Copied to clipobard'"
 alias bp="open ~/.bash_profile -a 'Sublime Text 2'"
+alias gs="git status"
+alias ga="git add --all"
+alias gc="git commit"
+alias gp="git push"
 
 export PS1="\u@\h:\W $"
 export CLICOLOR=1
@@ -17,7 +21,4 @@ parse_git_branch() {
 
 export PS1="\u \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\]:"
 
-alias gs="git status"
-alias ga="git add --all"
-alias gc="git commit"
-alias gp="git push"
+PATH="$PATH:$HOME/npm/bin"
