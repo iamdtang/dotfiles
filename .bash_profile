@@ -16,3 +16,8 @@ parse_git_branch() {
 }
 
 export PS1="\u \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\]:"
+
+alias gs="git status"
+alias ga="git add --all"
+alias gc="git commit"
+alias gp="git push"
